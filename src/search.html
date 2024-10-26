@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Search Box Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .search-container {
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+        }
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .search-box:focus {
+            border-color: #ff6b35;
+            box-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
+            outline: none;
+        }
+        .results {
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .results.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .result-item {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .result-item:hover {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="searchBox" class="search-box" placeholder="Search..." onkeyup="searchItems()">
+        <div class="results" id="resultsContainer">
+            <div class="result-item">NEW</div>
+            <div class="result-item">Designer</div>
+            <div class="result-item">Canvas</div>
+            <div class="result-item">Leather</div>
+            <div class="result-item">Retro</div>
+            <div class="result-item">Seasonal</div>
+            <div class="result-item">Winters</div>
+            <div class="result-item">Summers</div>
+            <div class="result-item">Monsoon</div>
+            <div class="result-item">Sports</div>
+            <div class="result-item">Running</div>
+            <div class="result-item">Basketball</div>
+            <div class="result-item">Bowling</div>
+            <div class="result-item">Football</div>
+        </div>
+    </div>
+
+    <script>
+        function searchItems() {
+            const query = document.getElementById('searchBox').value.toLowerCase();
+            const items = document.querySelectorAll('.result-item');
+            const resultsContainer = document.getElementById('resultsContainer');
+            let hasMatches = false;
+
+            items.forEach(item => {
+                const itemName = item.textContent.toLowerCase();
+                if (itemName.includes(query)) {
+                    item.style.display = 'block';
+                    hasMatches = true; // Set flag if there's a match
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Show or hide the results container based on matches
+            if (hasMatches) {
+                resultsContainer.classList.add('show');
+            } else {
+                resultsContainer.classList.remove('show');
+            }
+        }
+    </script>
+
+</body>
+</html>

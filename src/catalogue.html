@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Catalogue</title>
+    <link rel="stylesheet" href="./output.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .catalogue-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .shoe-tile {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .shoe-tile:hover {
+            transform: translateY(-5px);
+        }
+        .shoe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .shoe-info {
+            padding: 15px;
+        }
+        .shoe-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .shoe-price {
+            color: #007bff;
+            font-size: 16px;
+        }
+        
+    </style>
+    <script>
+        window.addEventListener('scroll', function() {
+        var header = document.querySelector('header');
+        header.classList.toggle('scrolled', window.scrollY > 0);
+    });
+    </script>
+</head>
+<body class="pt-20">
+    
+    <header class="fixed top-0 left-0 right-0 bg-white z-50 shadow">
+        <nav class="container mx-auto flex items-center justify-between py-10">    
+        <div>
+            <h1 class="text-black text-3xl font-bold">SneakerDoodle</h1>
+        </div> 
+        <div class="flex items-center">
+            <a class="ml-16 hover:text-orange-400 text-xl" href="index.html">Home</a>
+            <a class="ml-16 hover:text-orange-400 text-xl" href="catalogue.html">Catalogue</a>
+            <a class="ml-16 hover:text-orange-400 text-xl" href="payment.html">Billing</a>
+            <a class="ml-16 hover:text-orange-400 text-xl" href="shipping.html">Shipping</a>
+            <a class="ml-16 hover:text-orange-400 text-xl" href="#">Blog</a>
+            <a class="ml-16 hover:text-orange-400 text-xl" href="#">Wishlist</a>
+            <a class="ml-16 hover:text-orange-400 text-xl" href="support.html">Contact Us</a>
+        </div>
+
+        <div class="flex items-center">
+            <a href="login.html" class="size-10 ml-12"><img src="../images/user.svg" alt="user"></a>
+            <a href="search.html" class="size-10 ml-12"><img src="../images/search.png" alt="search"></a>
+            <a href="#" class="size-10 ml-12"><img src="../images/cart.svg" alt="cart"></a>
+        </div>
+    </nav>
+</header>
+<br>
+<br>
+<br>
+<br>
+    <div class="catalogue-container">
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Nike Red" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Nike Red</div>
+                <div class="shoe-price">₹10,789.00</div>
+            </div>
+        </div>
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2" alt="White Sneaker" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">White Sneaker</div>
+                <div class="shoe-price">₹7,469.00</div>
+            </div>
+        </div>
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772" alt="Blue Athletics" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Blue Athletics</div>
+                <div class="shoe-price">₹9,129.00</div>
+            </div>
+        </div>
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1556048219-bb6978360b84" alt="Classic Brown" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Classic Brown</div>
+                <div class="shoe-price">₹6,639.00</div>
+            </div>
+        </div>
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f" alt="Sporty Red" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Sporty Red</div>
+                <div class="shoe-price">₹9,959.00</div>
+            </div>
+        </div>
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86" alt="Retro Runners" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Retro Runners</div>
+                <div class="shoe-price">₹7,884.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a" alt="Urban Streetwear" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Urban Streetwear</div>
+                <div class="shoe-price">₹7,054.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2" alt="Neon Trainers" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Neon Trainers</div>
+                <div class="shoe-price">₹11,619.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1612015670817-0127d21628d4" alt="Hiking Boots" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Hiking Boots</div>
+                <div class="shoe-price">₹13,279.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb" alt="Comfort Walkers" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Comfort Walkers</div>
+                <div class="shoe-price">₹5,809.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1605408499391-6368c628ef42" alt="Canvas Slip-ons" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Canvas Slip-ons</div>
+                <div class="shoe-price">₹4,149.00</div>
+            </div>
+        </div>
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" alt="High-Top Sneakers" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">High-Top Sneakers</div>
+                <div class="shoe-price">₹9,544.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="Skate Pro" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Skate Pro</div>
+                <div class="shoe-price">₹6,639.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1562183241-b937e95585b6" alt="Leather Oxfords" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Leather Oxfords</div>
+                <div class="shoe-price">₹12,449.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1" alt="Eco Runners" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Eco Runners</div>
+                <div class="shoe-price">₹8,299.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2" alt="Neon Fitness" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Neon Fitness</div>
+                <div class="shoe-price">₹10,789.00</div>
+            </div>
+        </div>
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637" alt="Beach Sandals" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Beach Sandals</div>
+                <div class="shoe-price">₹3,319.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f" alt="Winter Boots" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Winter Boots</div>
+                <div class="shoe-price">₹14,109.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1554735490-5974588cbc4f" alt="Formal Heels" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Formal Heels</div>
+                <div class="shoe-price">₹7,469.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb" alt="Kids Sneakers" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Kids Sneakers</div>
+                <div class="shoe-price">₹4,979.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509" alt="Cycling Shoes" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Cycling Shoes</div>
+                <div class="shoe-price">₹11,619.00</div>
+            </div>
+        </div>
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77" alt="Classic Vans" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Classic Vans</div>
+                <div class="shoe-price">₹5,399.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86" alt="Retro Sneakers" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Retro Sneakers</div>
+                <div class="shoe-price">₹7,449.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1543508282-5c1f427f023f" alt="Red Running Shoes" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Red Running Shoes</div>
+                <div class="shoe-price">₹9,929.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2" alt="Neon Green Trainers" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Neon Green Trainers</div>
+                <div class="shoe-price">₹8,269.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1514989771522-458c9b6c035a" alt="Leather Loafers" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Leather Loafers</div>
+                <div class="shoe-price">₹10,799.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" alt="High-Top Canvas" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">High-Top Canvas</div>
+                <div class="shoe-price">₹6,229.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a" alt="Colorful Sneakers" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Colorful Sneakers</div>
+                <div class="shoe-price">₹7,049.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1554735490-5974588cbc4f" alt="Stiletto Heels" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Stiletto Heels</div>
+                <div class="shoe-price">₹9,109.00</div>
+            </div>
+        </div>
+        
+        <div class="shoe-tile">
+            <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa" alt="Hiking Boots" class="shoe-image">
+            <div class="shoe-info">
+                <div class="shoe-name">Hiking Boots</div>
+                <div class="shoe-price">₹12,439.00</div>
+            </div>
+        </div>
+        

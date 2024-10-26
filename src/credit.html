@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Payment</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .payment-form {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        input[type="text"], input[type="number"], input[type="tel"], input[type="email"], select {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .form-footer {
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Credit Card Payment</h1>
+    <form class="payment-form" action="#" method="POST">
+        <label for="cardholder-name">Cardholder Name:</label>
+        <input type="text" id="cardholder-name" name="cardholder-name" required>
+
+        <label for="card-number">Card Number:</label>
+        <input type="number" id="card-number" name="card-number" required>
+
+        <label for="expiration-date">Expiration Date:</label>
+        <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="number" id="cvv" name="cvv" required>
+
+        <label for="billing-address">Billing Address:</label>
+        <input type="text" id="billing-address" name="billing-address" required>
+
+
+        <div class="OTP" style="display: flex; justify-content: center; margin-top: 8px;">
+            <a href="otp.html" style="
+                display: inline-block; 
+                background-color: #4CAF50; 
+                color: white; 
+                padding: 10px 20px; 
+                text-align: center; 
+                text-decoration: none; 
+                border-radius: 5px; 
+                transition: background-color 0.3s; 
+                font-size: 16px;">
+                SEND OTP
+            </a>
+        </div>
+    
+    </form>
+    <div class="form-footer">
+        <p>Your payment is secured and encrypted.</p>
+    </div>
+</body>
+</html>

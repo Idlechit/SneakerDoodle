@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .otp-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 320px; /* Adjusted width for 6 digits */
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .otp-input-container {
+            display: flex; /* Use flexbox to align inputs in a row */
+            justify-content: center; /* Center the inputs horizontally */
+            margin-bottom: 20px; /* Space between inputs and resend link */
+        }
+
+        .otp-input {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0 5px; /* Space between inputs */
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .otp-input:focus {
+            border-color: #4CAF50;
+        }
+
+        .send-otp {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .send-otp:hover {
+            text-decoration: underline;
+        }
+
+        .submit-button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* Remove borders */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px;
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="otp-container">
+        <h2>Enter OTP</h2>
+        <p>A verification code has been sent to your registered mobile number.</p>
+        <div class="otp-input-container">
+            <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this)">
+            <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this)">
+            <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this)">
+            <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this)">
+            <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this)">
+            <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this)">
+        </div>
+        <a href="#" class="send-otp">Resend OTP</a>
+        <br>
+        <br>
+        <button class="submit-button">Verify</button>
+    </div>
+
+    <script>
+        function moveToNext(input) {
+            if (input.value.length >= input.maxLength) {
+                const nextInput = input.nextElementSibling;
+                if (nextInput) {
+                    nextInput.focus();
+                }
+            } else if (input.value.length === 0) {
+                const previousInput = input.previousElementSibling;
+                if (previousInput) {
+                    previousInput.focus();
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

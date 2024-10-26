@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .payment-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .payment-tile {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .payment-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .payment-tile img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        .payment-tile h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .payment-tile p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Payment Method</h1>
+    <div class="payment-options">
+        <div class="payment-tile" onclick="redirectToPage('credit.html')">
+            <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Credit Card">
+            <h2>Credit Card</h2>
+            <p>Secure payments using Visa, Mastercard, etc.</p>
+        </div>
+        <div class="payment-tile" onclick="redirectToPage('debit.html')">
+            <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="Debit Card">
+            <h2>Debit Card</h2>
+            <p>Instant payment using your bank debit card.</p>
+        </div>
+        <div class="payment-tile" onclick="redirectToPage('upi.html')">
+            <img src="../images/upi.png" alt="UPI">
+            <h2>UPI</h2>
+            <p>Pay instantly using UPI apps like PhonePe, GPay.</p>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage(page) {
+            window.location.href = page; // Redirect to the specified page
+        }
+    </script>
+</body>
+</html>
